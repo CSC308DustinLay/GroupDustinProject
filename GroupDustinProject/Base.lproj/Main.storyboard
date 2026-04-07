@@ -1,24 +1,316 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="24506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DUf-oW-35Q">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24504"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Navigation Controller-->
+        <scene sceneID="Pj9-wT-KXU">
+            <objects>
+                <navigationController id="uWR-oX-dIK" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="5g3-IR-YcX">
+                        <rect key="frame" x="0.0" y="118" width="393" height="54"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="hDO-c1-jwA"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V3I-9S-28g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-827" y="85"/>
+        </scene>
+        <!--MainVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="MainVC" id="BYZ-38-t0r" customClass="ViewController" customModule="GroupDustinProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YmA-3Q-KO1">
+                                <rect key="frame" x="0.0" y="442" width="393" height="410"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome Back" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vmT-nT-lGu">
+                                        <rect key="frame" x="50" y="10" width="293" height="42"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pvr-dC-BYA">
+                                        <rect key="frame" x="50" y="97" width="293" height="65"/>
+                                        <color key="backgroundColor" red="0.56528408910000005" green="0.65059197810000002" blue="0.4411481324" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="65" id="GYW-iM-31O"/>
+                                        </constraints>
+                                        <color key="tintColor" red="0.56528408910000005" green="0.65059197810000002" blue="0.4411481324" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Workout Helper">
+                                            <backgroundConfiguration key="background">
+                                                <color key="backgroundColor" red="0.56528408910000005" green="0.65059197810000002" blue="0.4411481324" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <color key="strokeColor" red="0.56528408910000005" green="0.65059197810000002" blue="0.4411481324" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </backgroundConfiguration>
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="35"/>
+                                            <color key="baseForegroundColor" systemColor="labelColor"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iU0-lQ-u8f">
+                                        <rect key="frame" x="50" y="207" width="293" height="65"/>
+                                        <color key="backgroundColor" red="0.56528408910000005" green="0.65059197810000002" blue="0.4411481324" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="65" id="h1r-C3-0md"/>
+                                        </constraints>
+                                        <color key="tintColor" red="0.56528408910000005" green="0.65059197810000002" blue="0.4411481324" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Calorie Tracker">
+                                            <backgroundConfiguration key="background">
+                                                <color key="backgroundColor" red="0.56528408910000005" green="0.65059197810000002" blue="0.4411481324" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <color key="strokeColor" red="0.56528408910000005" green="0.65059197810000002" blue="0.4411481324" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </backgroundConfiguration>
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="35"/>
+                                            <color key="baseForegroundColor" systemColor="labelColor"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ehm-yu-qpB">
+                                        <rect key="frame" x="50" y="317" width="293" height="65"/>
+                                        <color key="backgroundColor" red="0.56528408910000005" green="0.65059197810000002" blue="0.4411481324" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="65" id="Qxf-uP-QCb"/>
+                                        </constraints>
+                                        <color key="tintColor" red="0.56528408910000005" green="0.65059197810000002" blue="0.4411481324" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Weight Tracker">
+                                            <backgroundConfiguration key="background">
+                                                <color key="backgroundColor" red="0.56528408910000005" green="0.65059197810000002" blue="0.4411481324" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <color key="strokeColor" red="0.56528408910000005" green="0.65059197810000002" blue="0.4411481324" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </backgroundConfiguration>
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="35"/>
+                                            <color key="baseForegroundColor" systemColor="labelColor"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.7991881622" blue="0.62881362679999997" alpha="0.60419323979999995" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="ehm-yu-qpB" secondAttribute="trailing" constant="50" id="ApQ-qL-Uma"/>
+                                    <constraint firstItem="iU0-lQ-u8f" firstAttribute="leading" secondItem="YmA-3Q-KO1" secondAttribute="leading" constant="50" id="DEG-Js-iIA"/>
+                                    <constraint firstItem="ehm-yu-qpB" firstAttribute="leading" secondItem="YmA-3Q-KO1" secondAttribute="leading" constant="50" id="Fm5-ZY-fdg"/>
+                                    <constraint firstItem="Pvr-dC-BYA" firstAttribute="top" secondItem="vmT-nT-lGu" secondAttribute="bottom" constant="45" id="GPs-9r-k8V"/>
+                                    <constraint firstItem="Pvr-dC-BYA" firstAttribute="leading" secondItem="YmA-3Q-KO1" secondAttribute="leading" constant="50" id="Lx9-91-8DG"/>
+                                    <constraint firstAttribute="trailing" secondItem="iU0-lQ-u8f" secondAttribute="trailing" constant="50" id="ZFg-Z5-5CQ"/>
+                                    <constraint firstAttribute="trailing" secondItem="Pvr-dC-BYA" secondAttribute="trailing" constant="50" id="aPL-0l-gtN"/>
+                                    <constraint firstItem="iU0-lQ-u8f" firstAttribute="top" secondItem="Pvr-dC-BYA" secondAttribute="bottom" constant="45" id="m7e-iX-Lhl"/>
+                                    <constraint firstAttribute="trailing" secondItem="vmT-nT-lGu" secondAttribute="trailing" constant="50" id="peb-BU-njq"/>
+                                    <constraint firstItem="vmT-nT-lGu" firstAttribute="leading" secondItem="YmA-3Q-KO1" secondAttribute="leading" constant="50" id="q2t-JU-L51"/>
+                                    <constraint firstItem="vmT-nT-lGu" firstAttribute="top" secondItem="YmA-3Q-KO1" secondAttribute="top" constant="10" id="sNu-ux-nYE"/>
+                                    <constraint firstItem="ehm-yu-qpB" firstAttribute="top" secondItem="iU0-lQ-u8f" secondAttribute="bottom" constant="45" id="yjP-cF-Unk"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="16"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1024x1024" translatesAutoresizingMaskIntoConstraints="NO" id="MZZ-Hz-RyP">
+                                <rect key="frame" x="66" y="172" width="260" height="230"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="260" id="PaJ-0u-Cyg"/>
+                                    <constraint firstAttribute="height" constant="230" id="yDa-oe-Ybw"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.56528408908287409" green="0.65059197809278357" blue="0.44114813236141565" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="MZZ-Hz-RyP" secondAttribute="trailing" constant="67" id="9jd-P0-e9q"/>
+                            <constraint firstItem="YmA-3Q-KO1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ONz-8p-svZ"/>
+                            <constraint firstAttribute="bottom" secondItem="YmA-3Q-KO1" secondAttribute="bottom" id="mDb-iK-8Ow"/>
+                            <constraint firstItem="MZZ-Hz-RyP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="p1w-0E-kkO"/>
+                            <constraint firstItem="MZZ-Hz-RyP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="66" id="vhk-5h-dNa"/>
+                            <constraint firstItem="YmA-3Q-KO1" firstAttribute="top" secondItem="MZZ-Hz-RyP" secondAttribute="bottom" constant="40" id="xLN-m7-MiM"/>
+                            <constraint firstItem="YmA-3Q-KO1" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="yX4-pO-1vu"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Gym Buddy" id="IAS-1i-evo"/>
+                    <connections>
+                        <segue destination="hJz-0P-EaD" kind="show" identifier="showWeight" id="JXQ-Mj-o0J"/>
+                        <segue destination="DUf-oW-35Q" kind="show" identifier="showCalorie" id="xw5-Jg-AWo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="119.84732824427481" y="84.507042253521135"/>
+        </scene>
+        <!--WorkoutVC-->
+        <scene sceneID="ZX3-RD-nUm">
+            <objects>
+                <viewController title="WorkoutVC" id="Llg-aD-xxv" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UKV-Lb-Nqu">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="MQx-SE-yeD"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nE3-Ng-OWA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1100" y="-572"/>
+        </scene>
+        <!--CalorieVC-->
+        <scene sceneID="OqI-IL-8Lr">
+            <objects>
+                <viewController title="CalorieVC" id="DUf-oW-35Q" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rNr-p7-4v8">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter total calories consumed below:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BFv-0S-uIy">
+                                <rect key="frame" x="65" y="172" width="263" height="71.666666666666686"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of calories burned:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xpy-st-R1g">
+                                <rect key="frame" x="65" y="352.66666666666669" width="263" height="71.666666666666686"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Click to calculate your net calories today" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CjP-wc-73N">
+                                <rect key="frame" x="60" y="531.33333333333337" width="273" height="64.666666666666629"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Number of calories" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Oh-fd-w05">
+                                <rect key="frame" x="60" y="263.66666666666669" width="273" height="44"/>
+                                <color key="backgroundColor" red="0.82745099070000006" green="0.74117648599999997" blue="0.55686277149999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#### Calories" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eAS-Gl-ezT">
+                                <rect key="frame" x="60" y="444.33333333333331" width="273" height="42"/>
+                                <color key="backgroundColor" red="0.82745099070000006" green="0.74117648599999997" blue="0.55686277149999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JHs-Zh-MLQ">
+                                <rect key="frame" x="50" y="616" width="293" height="65"/>
+                                <color key="backgroundColor" red="0.82745099070000006" green="0.74117648599999997" blue="0.55686277149999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="ZYz-h7-CcR"/>
+                                </constraints>
+                                <color key="tintColor" red="0.82745099070000006" green="0.74117648599999997" blue="0.55686277149999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Calculate Net">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" red="0.82745099070000006" green="0.74117648599999997" blue="0.55686277149999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="strokeColor" red="0.82745099070000006" green="0.74117648599999997" blue="0.55686277149999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </backgroundConfiguration>
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="35"/>
+                                    <color key="baseForegroundColor" systemColor="labelColor"/>
+                                </buttonConfiguration>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Net Calories: ####" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NT7-lh-4ro">
+                                <rect key="frame" x="50" y="731" width="293" height="36"/>
+                                <color key="backgroundColor" red="0.82745099070000006" green="0.74117648599999997" blue="0.55686277149999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="SCD-pJ-f3N"/>
+                        <color key="backgroundColor" red="0.56528408910000005" green="0.65059197810000002" blue="0.4411481324" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="0Oh-fd-w05" firstAttribute="leading" secondItem="SCD-pJ-f3N" secondAttribute="leading" constant="60" id="0sf-FF-noO"/>
+                            <constraint firstItem="BFv-0S-uIy" firstAttribute="top" secondItem="SCD-pJ-f3N" secondAttribute="top" id="1dc-Vi-YHb"/>
+                            <constraint firstItem="SCD-pJ-f3N" firstAttribute="trailing" secondItem="0Oh-fd-w05" secondAttribute="trailing" constant="60" id="2xQ-yu-a3c"/>
+                            <constraint firstItem="SCD-pJ-f3N" firstAttribute="trailing" secondItem="NT7-lh-4ro" secondAttribute="trailing" constant="50" id="4un-tm-71C"/>
+                            <constraint firstItem="eAS-Gl-ezT" firstAttribute="top" secondItem="xpy-st-R1g" secondAttribute="bottom" constant="20" id="9ki-Sk-9Bw"/>
+                            <constraint firstItem="SCD-pJ-f3N" firstAttribute="trailing" secondItem="CjP-wc-73N" secondAttribute="trailing" constant="60" id="DdX-Zm-xzm"/>
+                            <constraint firstItem="NT7-lh-4ro" firstAttribute="top" secondItem="JHs-Zh-MLQ" secondAttribute="bottom" constant="50" id="DfQ-V1-5oJ"/>
+                            <constraint firstItem="SCD-pJ-f3N" firstAttribute="trailing" secondItem="BFv-0S-uIy" secondAttribute="trailing" constant="65" id="Hzs-L9-hfP"/>
+                            <constraint firstItem="eAS-Gl-ezT" firstAttribute="leading" secondItem="SCD-pJ-f3N" secondAttribute="leading" constant="60" id="PmV-eF-DUl"/>
+                            <constraint firstItem="JHs-Zh-MLQ" firstAttribute="leading" secondItem="SCD-pJ-f3N" secondAttribute="leading" constant="50" id="RTG-z0-9VD"/>
+                            <constraint firstItem="CjP-wc-73N" firstAttribute="top" secondItem="eAS-Gl-ezT" secondAttribute="bottom" constant="45" id="Yus-kW-VrO"/>
+                            <constraint firstItem="xpy-st-R1g" firstAttribute="leading" secondItem="SCD-pJ-f3N" secondAttribute="leading" constant="65" id="ZXl-Ul-M3Q"/>
+                            <constraint firstItem="BFv-0S-uIy" firstAttribute="leading" secondItem="SCD-pJ-f3N" secondAttribute="leading" constant="65" id="f06-E0-Hd1"/>
+                            <constraint firstItem="SCD-pJ-f3N" firstAttribute="trailing" secondItem="xpy-st-R1g" secondAttribute="trailing" constant="65" id="lcq-zg-eV7"/>
+                            <constraint firstItem="JHs-Zh-MLQ" firstAttribute="top" secondItem="CjP-wc-73N" secondAttribute="bottom" constant="20" id="msn-sm-NMj"/>
+                            <constraint firstItem="SCD-pJ-f3N" firstAttribute="trailing" secondItem="JHs-Zh-MLQ" secondAttribute="trailing" constant="50" id="phO-tO-nga"/>
+                            <constraint firstItem="SCD-pJ-f3N" firstAttribute="trailing" secondItem="eAS-Gl-ezT" secondAttribute="trailing" constant="60" id="psg-qx-hkz"/>
+                            <constraint firstItem="0Oh-fd-w05" firstAttribute="top" secondItem="BFv-0S-uIy" secondAttribute="bottom" constant="20" id="rOn-uQ-SEh"/>
+                            <constraint firstItem="xpy-st-R1g" firstAttribute="top" secondItem="0Oh-fd-w05" secondAttribute="bottom" constant="45" id="vno-mS-z2L"/>
+                            <constraint firstItem="NT7-lh-4ro" firstAttribute="leading" secondItem="SCD-pJ-f3N" secondAttribute="leading" constant="50" id="vog-AW-JEp"/>
+                            <constraint firstItem="CjP-wc-73N" firstAttribute="leading" secondItem="SCD-pJ-f3N" secondAttribute="leading" constant="60" id="x1f-0E-eEa"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Calorie Tracker" id="e6E-Bi-yJU"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nSh-ko-aJZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1100" y="84.507042253521135"/>
+        </scene>
+        <!--WeightVC-->
+        <scene sceneID="Zpi-yD-H7N">
+            <objects>
+                <viewController title="WeightVC" id="hJz-0P-EaD" customClass="WeightViewController" customModule="GroupDustinProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BBW-cw-rwI">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="singleLineEtched" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Xc1-dG-Ha0">
+                                <rect key="frame" x="0.0" y="172" width="393" height="680"/>
+                                <color key="backgroundColor" red="0.56528408910000005" green="0.65059197810000002" blue="0.4411481324" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="HfM-CA-Q19">
+                                        <rect key="frame" x="20" y="55.333332061767578" width="353" height="51"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="HfM-CA-Q19" id="awA-tn-7Z4">
+                                            <rect key="frame" x="0.0" y="0.0" width="353" height="51"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.82745099070000006" green="0.74117648599999997" blue="0.55686277149999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="hJz-0P-EaD" id="I5Z-nm-jRg"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="jb9-30-G9N"/>
+                        <color key="backgroundColor" red="0.56528408910000005" green="0.65059197810000002" blue="0.4411481324" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="Xc1-dG-Ha0" firstAttribute="top" secondItem="jb9-30-G9N" secondAttribute="top" id="76y-gP-Mfh"/>
+                            <constraint firstItem="Xc1-dG-Ha0" firstAttribute="leading" secondItem="jb9-30-G9N" secondAttribute="leading" id="CZL-zB-K5W"/>
+                            <constraint firstAttribute="bottom" secondItem="Xc1-dG-Ha0" secondAttribute="bottom" id="Ifg-N8-HKO"/>
+                            <constraint firstItem="Xc1-dG-Ha0" firstAttribute="trailing" secondItem="jb9-30-G9N" secondAttribute="trailing" id="w9B-kv-1kT"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Weight Tracker" id="IKK-95-Eg2"/>
+                    <connections>
+                        <outlet property="tableView" destination="Xc1-dG-Ha0" id="Kq2-bI-O7w"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="okv-jy-ma5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1100" y="746.47887323943667"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="1024x1024" width="1024" height="1024"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
